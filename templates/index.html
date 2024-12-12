@@ -12,6 +12,15 @@
 
     <h2>{{course_title}}</h2>
 
-    <p>Today's date: {{current_date}}</p>
+    <p>Today's date: {{current_date| date:"F j, Y"}}</p>
+
+    <h2>User Information:</h2>
+    <p>Name: {{user.name}}</p>
+    <p>Email: {{user.email}}</p>
+
+    <h2>Product Price:</h2>
+    <p>${{product_price|floatformat:2}}</p>
+
+    <p>{{random_text|truncatechars:20}}</p>
   </body>
 </html>

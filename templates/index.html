@@ -1,4 +1,4 @@
-<% load static %>
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,8 +11,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,11 +20,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
@@ -61,7 +61,7 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <!-- <img src="{% static 'assets/img/logo.png' %}" alt=""> -->
         <h1>Impact<span>.</span></h1>
       </a>
       <nav id="navbar" class="navbar">
@@ -198,7 +198,7 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center">
-                    <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img flex-shrink-0" alt="">
+                    <img src="{% static 'assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img flex-shrink-0" alt="">
                     <div>
                       <h3>Saul Goodman</h3>
                       <h4>Ceo &amp; Founder</h4>
@@ -220,7 +220,7 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center">
-                    <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img flex-shrink-0" alt="">
+                    <img src="{% static 'assets/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img flex-shrink-0" alt="">
                     <div>
                       <h3>Adam</h3>
                       <h4>Designer</h4>
@@ -353,7 +353,7 @@
             <article>
 
               <div class="post-img">
-                <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+                <img src="{% static 'assets/img/blog/blog-1.jpg' %}" alt="" class="img-fluid">
               </div>
 
               <p class="post-category">Politics</p>
@@ -378,7 +378,7 @@
             <article>
 
               <div class="post-img">
-                <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
+                <img src="{% static 'assets/img/blog/blog-2.jpg' %}" alt="" class="img-fluid">
               </div>
 
               <p class="post-category">Sports</p>
@@ -403,7 +403,7 @@
             <article>
 
               <div class="post-img">
-                <img src="assets/img/blog/blog-3.jpg" alt="" class="img-fluid">
+                <img src="{% static 'assets/img/blog/blog-3.jpg' %}" alt="" class="img-fluid">
               </div>
 
               <p class="post-category">Entertainment</p>
@@ -533,14 +533,14 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}" ></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
   <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
   <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
   <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
   <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{% static 'assets/js/main.js' %}"></script>
 
 </body>
 

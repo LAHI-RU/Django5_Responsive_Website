@@ -32,4 +32,13 @@ class GeneralInfoAdmin(admin.ModelAdmin):
 
 @admin.register(Services)
 class ServicesAdmin(admin.ModelAdmin):
-    pass
+    
+    list_display = {
+        "title",
+        "description"
+    }
+
+    search_fields = {
+        "title",
+        "description"
+    }

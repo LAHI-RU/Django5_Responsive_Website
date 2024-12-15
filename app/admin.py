@@ -1,5 +1,5 @@
 from django.contrib import admin
-from app.models import GeneralInfo
+from app.models import GeneralInfo, Services
 
 @admin.register(GeneralInfo)
 class GeneralInfoAdmin(admin.ModelAdmin):
@@ -28,3 +28,8 @@ class GeneralInfoAdmin(admin.ModelAdmin):
 #    readonly_fields = [
 #        'email'
 #    ]
+
+
+@admin.register(Services)
+class ServicesAdmin(admin.ModelAdmin):
+    pass

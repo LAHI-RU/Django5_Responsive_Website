@@ -16,7 +16,7 @@ class GeneralInfo(models.Model):
         return self.company_name
     
 
-class Services(models.Model):
+class Service(models.Model):
     icon = models.CharField(max_length=50, blank=True, null=True)
     title = models.CharField(max_length=255, unique=True)
     description = models.TextField()

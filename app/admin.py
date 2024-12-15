@@ -1,5 +1,5 @@
 from django.contrib import admin
-from app.models import GeneralInfo, Services
+from app.models import GeneralInfo, Service
 
 @admin.register(GeneralInfo)
 class GeneralInfoAdmin(admin.ModelAdmin):
@@ -30,7 +30,7 @@ class GeneralInfoAdmin(admin.ModelAdmin):
 #    ]
 
 
-@admin.register(Services)
+@admin.register(Service)
 class ServicesAdmin(admin.ModelAdmin):
     
     list_display = [

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from app.models import GeneralInfo
+from app.models import GeneralInfo, Services
 
 # from django.db import connection
 # def write_sql_queries_to_file(file_path):
@@ -29,7 +29,9 @@ def index(request):
 #     write_sql_queries_to_file(file_path)
 
     general_info = GeneralInfo.objects.first()
-    print(f"general_info:  {general_info.location}")
+
+    service = Services.objects.all()
+    
 
     context = {
         "company_name": general_info.company_name,
@@ -42,6 +44,8 @@ def index(request):
         "facebook_url": general_info.facebook_url,
         "instagram_url": general_info.instagram_url,
         "linkedin_url": general_info.linkedin_url,
+
+        "services" : service
     }
 
     print(f"context : {context}")

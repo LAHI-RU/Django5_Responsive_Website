@@ -33,12 +33,12 @@ class GeneralInfoAdmin(admin.ModelAdmin):
 @admin.register(Services)
 class ServicesAdmin(admin.ModelAdmin):
     
-    list_display = {
+    list_display = [
         "title",
         "description"
-    }
+    ]
 
-    search_fields = {
+    search_fields = [
         "title",
         "description"
-    }
+    ]

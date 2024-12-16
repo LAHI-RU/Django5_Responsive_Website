@@ -33,18 +33,19 @@
 
     <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
       <div class="swiper-wrapper">
+        {% for testimonial in testimonials %}
         <div class="swiper-slide">
           <div class="testimonial-wrap">
             <div class="testimonial-item">
               <div class="d-flex align-items-center">
                 <img
-                  src="{% static 'assets/img/testimonials/testimonials-1.jpg' %}"
+                  src="{% static testimonial.user_image %}"
                   class="testimonial-img flex-shrink-0"
                   alt=""
                 />
                 <div>
-                  <h3>Saul Goodman</h3>
-                  <h4>Ceo &amp; Founder</h4>
+                  <h3>{{testimonial.username}}</h3>
+                  <h4>{{testimonial.user_job_title}}</h4>
                   <div class="stars">
                     <i class="bi bi-star-fill"></i
                     ><i class="bi bi-star-fill"></i
@@ -66,40 +67,7 @@
           </div>
         </div>
         <!-- End testimonial item -->
-
-        <div class="swiper-slide">
-          <div class="testimonial-wrap">
-            <div class="testimonial-item">
-              <div class="d-flex align-items-center">
-                <img
-                  src="{% static 'assets/img/testimonials/testimonials-4.jpg' %}"
-                  class="testimonial-img flex-shrink-0"
-                  alt=""
-                />
-                <div>
-                  <h3>Adam</h3>
-                  <h4>Designer</h4>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i>
-                  </div>
-                </div>
-              </div>
-              <p>
-                <i class="bi bi-quote quote-icon-left"></i>
-                Incredible results, exceptional service! [Your Agency Name]
-                delivered beyond our expectations. Their creativity and
-                expertise transformed our marketing strategy, resulting in
-                increased leads and revenue. Highly recommended.
-                <i class="bi bi-quote quote-icon-right"></i>
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- End testimonial item -->
+        {% endfor %}
       </div>
       <div class="swiper-pagination"></div>
     </div>

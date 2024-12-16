@@ -1,5 +1,10 @@
 from django.shortcuts import render
-from app.models import GeneralInfo, Service, Testimonial
+from app.models import (
+    GeneralInfo, 
+    Service, 
+    Testimonial,
+    FrequentlyAskedQuestion,
+)
 
 # from django.db import connection
 # def write_sql_queries_to_file(file_path):
@@ -33,6 +38,8 @@ def index(request):
     services = Service.objects.all()
 
     testimonials = Testimonial.objects.all()
+
+    faqs = FrequentlyAskedQuestion.objects.all()
     
     context = {
         "company_name": general_info.company_name,
@@ -48,6 +55,8 @@ def index(request):
 
         "services" : services,
         "testimonials" : testimonials,
+
+        "faqs": faqs,
     }
 
     print(f"context : {context}")

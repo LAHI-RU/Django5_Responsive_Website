@@ -1,5 +1,10 @@
 from django.contrib import admin
-from app.models import GeneralInfo, Service, Testimonial
+from app.models import (
+    GeneralInfo, 
+    Service, 
+    Testimonial, 
+    FrequentlyAskedQuestion,
+)
 
 @admin.register(GeneralInfo)
 class GeneralInfoAdmin(admin.ModelAdmin):
@@ -56,3 +61,12 @@ class TestimonialAdmin(admin.ModelAdmin):
         return '*' * obj.rating_count
     
     display_rating_count.short_description = "Rating"
+
+
+@admin.register(FrequentlyAskedQuestion)
+class FrequentlyAskedQuestionAdmin(admin.ModelAdmin):
+
+    list_display = [
+        'question',
+        'answer',
+    ]

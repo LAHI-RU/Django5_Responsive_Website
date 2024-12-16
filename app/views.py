@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from app.models import GeneralInfo, Service
+from app.models import GeneralInfo, Service, Testimonial
 
 # from django.db import connection
 # def write_sql_queries_to_file(file_path):
@@ -31,8 +31,9 @@ def index(request):
     general_info = GeneralInfo.objects.first()
 
     services = Service.objects.all()
-    
 
+    testimonials = Testimonial.objects.all()
+    
     context = {
         "company_name": general_info.company_name,
         "location": general_info. location,
@@ -46,6 +47,7 @@ def index(request):
         "linkedin_url": general_info.linkedin_url,
 
         "services" : services,
+        "testimonials" : testimonials,
     }
 
     print(f"context : {context}")

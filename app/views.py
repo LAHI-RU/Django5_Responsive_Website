@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.core.mail import send_mail
 from app.models import (
     GeneralInfo, 
     Service, 
@@ -62,6 +63,17 @@ def index(request):
     return render(request, "index.html", context)
 
 def contact_form(request):
-    print("\nUser has submit a contact form\n")
+
+    if request.method == 'POST':
+        print("\nUser has submit a contact form\n")
+    
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        subject = request.POST.get('subject')
+        message = request.POST.get('subject')
+
+
+        # send_mail()
+    
     return redirect('home')
 

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from app.models import (
     GeneralInfo, 
     Service, 
@@ -59,5 +59,9 @@ def index(request):
         "faqs": faqs,
     }
 
-    print(f"context : {context}")
     return render(request, "index.html", context)
+
+def contact_form(request):
+    print("\nUser has submit a contact form\n")
+    return redirect('home')
+

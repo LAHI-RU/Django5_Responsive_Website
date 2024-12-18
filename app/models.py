@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 class GeneralInfo(models.Model):
     company_name = models.CharField(max_length=255, default="Company")
@@ -63,3 +64,14 @@ class ContactFormLog(models.Model):
     def __str__(self):
         return self.email
 
+class Blog(models.Model):
+    blog_image = models.CharField(max_length=255, null=True, blank=True)
+    category = models.CharField(max_length=50, null=True, blank=True)
+    title = models.CharField(max_length=255)
+    author = models.CharField(max_length=50)
+    created_at = models.DateTimeField(default=timezone.now)
+    content = models.TextField()
+
+    def __str__(self):
+        return self.title
+        

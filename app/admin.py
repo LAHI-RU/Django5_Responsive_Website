@@ -109,6 +109,7 @@ class BlogAdmin(admin.ModelAdmin):
     # displays selected fields
     list_display = [
         'category',
+        'author',
         'title',
         'blog_image',
         'created_at',

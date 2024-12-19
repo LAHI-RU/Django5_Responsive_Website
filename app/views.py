@@ -10,6 +10,7 @@ from app.models import (
     Testimonial,
     FrequentlyAskedQuestion,
     ContactFormLog,
+    Blog,
 )
 
 # Create your views here.
@@ -22,6 +23,9 @@ def index(request):
     testimonials = Testimonial.objects.all()
 
     faqs = FrequentlyAskedQuestion.objects.all()
+
+    recent_blogs = Blog.objects.all().order_by("-created_at")[:3]
+    
     
     context = {
         "company_name": general_info.company_name,
@@ -39,6 +43,7 @@ def index(request):
         "testimonials" : testimonials,
 
         "faqs": faqs,
+        "recent_blogs": recent_blogs,
     }
 
     return render(request, "index.html", context)
@@ -101,3 +106,10 @@ def contact_form(request):
 
     return redirect('home')
 
+def blog_detail(request, blog_id):
+    blog = Blog.objects.get(id=blog_id)
+
+    context = {
+        "blog": blog,
+    }
+    return render(request, "blog_details.html", context)

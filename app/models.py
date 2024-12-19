@@ -77,7 +77,7 @@ class Blog(models.Model):
     blog_image = models.CharField(max_length=255, null=True, blank=True)
     category = models.CharField(max_length=50, null=True, blank=True)
     title = models.CharField(max_length=255)
-    # author = models.CharField(max_length=50)
+    author = models.ForeignKey()
     created_at = models.DateTimeField(default=timezone.now)
     content = models.TextField()
 

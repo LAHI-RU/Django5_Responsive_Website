@@ -1,4 +1,5 @@
-# Complete Responsive Website from Scratch
+# Django5 Responsive Website
+
 *A Django 5 project showcasing a fully responsive website with modern design and CRUD functionalities.*
 
 ![Project Preview](path-to-your-screenshot-or-demo-gif)

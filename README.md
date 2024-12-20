@@ -39,4 +39,60 @@ Follow these steps to set up the project locally:
    ```bash
    git clone https://github.com/LAHI-RU/Complete_website_from_scratch.git
    cd Complete_website_from_scratch
+   ```
 
+2. **Create a Virtual Environment:**
+   ```bash
+   python -m venv env
+   source env/bin/activate   # For Linux/Mac
+   env\Scripts\activate      # For Windows
+   ```
+
+3. **Install Dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run Migrations:**
+   ```bash
+   python manage.py migrate
+   ```
+
+5. **Start the Server:**
+   ```bash
+   python manage.py runserver
+   ```
+
+6. **Access the Website:**
+   Open your browser and navigate to `http://127.0.0.1:8000/`.
+
+## Usage
+- **Admin Panel:**
+  Access the admin panel at `/admin` for managing content.
+- **CRUD Operations:**
+  Create, update, or delete entries via the user interface.
+
+## Deployment
+To deploy this project to a live environment, follow these steps:
+
+1. Configure your settings for production.
+2. Set up a WSGI server (e.g., Gunicorn).
+3. Use a web server (e.g., Nginx) as a reverse proxy.
+4. Deploy to a hosting platform like AWS, Heroku, or DigitalOcean.
+
+## Contributing
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-name`).
+3. Commit your changes (`git commit -m 'Add feature'`).
+4. Push to the branch (`git push origin feature-name`).
+5. Open a pull request.
+
+## License
+This project is licensed under the [MIT License](LICENSE).
+
+## Acknowledgements
+- **Django Documentation**
+- **Bootstrap Framework**
+- **Open Source Contributors**

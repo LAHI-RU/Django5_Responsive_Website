@@ -27,18 +27,19 @@ def index(request):
 
     recent_blogs = Blog.objects.all().order_by("-created_at")[:3]
     
-    
+    default_value = ""
+
     context = {
-        "company_name": general_info.company_name,
-        "location": general_info. location,
-        "email": general_info.email,
-        "phone": general_info.phone,
-        "open_hours": general_info.open_hours,
-        "video_url": general_info.video_url,
-        "twitter_url": general_info.twitter_url,
-        "facebook_url": general_info.facebook_url,
-        "instagram_url": general_info.instagram_url,
-        "linkedin_url": general_info.linkedin_url,
+        "company_name": getattr(general_info, "company_name", default_value),
+        "location": getattr(general_info, "location", default_value),
+        "email": getattr(general_info, "email", default_value),
+        "phone": getattr(general_info, "phone", default_value),
+        "open_hours": getattr(general_info, "open_hours", default_value),
+        "video_url": getattr(general_info, "video_url", default_value),
+        "twitter_url": getattr(general_info, "twitterurl", default_value),
+        "facebook_url": getattr(general_info, "facebook_url", default_value),
+        "instagram_url": getattr(general_info, "instagram_url", default_value),
+        "linkedin_url": getattr(general_info, "linkedin_url", default_value),
 
         "services" : services,
         "testimonials" : testimonials,

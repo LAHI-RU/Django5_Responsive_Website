@@ -28,5 +28,5 @@ urlpatterns = [
     path('', index, name="home"),
     path('contact/', contact_form, name="contact_form"),
     path('blog-detail/<blog_id>', blog_detail, name="blog_detail"),
-    path('blogs/', blogs, name="blogs")
+    path('blogs/', blogs, name="blogs"),
 ]
